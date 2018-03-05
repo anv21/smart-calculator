@@ -1,26 +1,35 @@
 class SmartCalculator {
-  constructor(initialValue) {
-    // your implementation
+  constructor(firstValue) {
+    this.expression = firstValue;
   }
 
   add(number) {
-    // your implementation
+    this.expression += '+' + number;
+    return this;
   }
-  
+
   subtract(number) {
-    // your implementation
+    this.expression += '-' + number;
+    return this;
   }
 
   multiply(number) {
-    // your implementation
+    this.expression += '*' + number;
+    return this;
   }
 
   devide(number) {
-    // your implementation
+    this.expression += '/' + number;
+    return this;
   }
 
   pow(number) {
-    // your implementation
+    this.expression += '**' + number;
+    return this;
+  }
+
+  valueOf() {
+   return eval(this.expression);
   }
 }
 
